@@ -1,0 +1,28 @@
+{
+  "name": "heroku-compare-envs",
+  "version": "1.0.0",
+  "description": "A package used to compare envs and find missing variables across a pipeline",
+  "main": "compare_envs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "index": "./bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/starvey/heroku-compare-envs.git"
+  },
+  "author": "Steven Harvey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/starvey/heroku-compare-envs/issues"
+  },
+  "homepage": "https://github.com/starvey/heroku-compare-envs#readme",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "console.table": "^0.8.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  }
+}
