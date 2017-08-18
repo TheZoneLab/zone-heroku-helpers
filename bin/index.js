@@ -1,7 +1,7 @@
+#!/usr/bin/env node
 const rp = require('request-promise')
 const colors = require('colors')
 require('console.table')
-
 const [herokuToken, appId1, appId2] = process.argv.slice(process.argv.length - 3, process.argv.length)
 
 const defaultOptions = {
