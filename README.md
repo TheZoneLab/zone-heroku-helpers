@@ -1,5 +1,5 @@
 # Usage
 
 ```
-compare-envs.js `heroku auth:token` app-id-1 app-id-2
+compare-envs `heroku auth:token` app-id-1 app-id-2
 ```
