@@ -36,27 +36,27 @@ Promise.all([
 })
 
 function generateDisplayDataRow(app1Vars, app2Vars, k) {
-    let app1Value = app1Vars[k]
-    let app2Value = app2Vars[k]
-    if (app1Value === app2Value) {
-      app1Value = app1Value.dim.green
-      app2Value = app2Value.dim.green
+  let app1Value = app1Vars[k]
+  let app2Value = app2Vars[k]
+  if (app1Value === app2Value) {
+    app1Value = app1Value.dim.green
+    app2Value = app2Value.dim.green
+  } else {
+    if (app1Value) {
+      app1Value = app1Value.yellow
     } else {
-      if (app1Value) {
-        app1Value = app1Value.yellow
-      } else {
-        app1Value = 'WARNING: NOT SET'.bold.red
-      }
-      if (app2Value) {
-        app2Value = app2Value.yellow
-      } else {
-        app2Value = 'WARNING: NOT SET'.bold.red
-      }
+      app1Value = 'WARNING: NOT SET'.bold.red
     }
-
-    return {
-      key: k,
-      [appId1.bold]: app1Value,
-      [appId2.bold]: app2Value
+    if (app2Value) {
+      app2Value = app2Value.yellow
+    } else {
+      app2Value = 'WARNING: NOT SET'.bold.red
     }
   }
+
+  return {
+    key: k,
+    [appId1.bold]: app1Value,
+    [appId2.bold]: app2Value
+  }
+}
